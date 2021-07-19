@@ -8,20 +8,14 @@ class Solution
      */
     function reverse(int $x)
     {
-        $reslt = 0;
-        if ($x < 0) {
-            $x = abs($x);
-            $reslt = "-" . strrev($x);
-        } else {
-            $x = abs($x);
-            $reslt = strrev($x);
-            //echo substr($reslt, 0,0);
-            ltrim($reslt, '0');
-        }
-        return $reslt;
+        $temp =0;
+        $temp =(int) ( $x / 10);
+        return $temp;
+        
     }
 }
 $one = new Solution();
 //$one->reverse(-234);
-$one->reverse(120);
-//$one->reverse(0123);
+$op = $one->reverse(120);
+$op = $one->reverse(123);
+echo $op;
